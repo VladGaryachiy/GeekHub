@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+<input type ="text">
+<button value="On">Go</button>
+
+
+
+
+<script>
+
+
+    $("button").on("click",function (e) {
+        var text = $('input[type="text"]').val();
+        console.log(test(text));
+    });
+
+
+/*    function test(name,surname,nam,number1,number2) {
+
+        var count = 0;
+
+        for (var i = 0;i<arguments.length;i++){
+            if (typeof arguments[i] === "string"){
+                count++;
+            }
+        }
+
+        return count;
+
+    }*/
+
+    function test(text) {
+        return text.length;
+    }
+
+</script>
+</body>
+</html>

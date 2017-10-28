@@ -1,0 +1,33 @@
+.main{
+    color: yellow;
+    display: flex;
+}
+
+
+.block-one,.block-two{
+    display: flex;
+    outline: 1px solid black;
+    padding: 20px;
+}
+.block-two{
+    margin-left: 10px;
+}
+
+.text-block{
+    flex-direction: column;
+    margin-left: 20px;
+    color: black;
+}
+.img-one,.img-two {
+    outline: 1px solid black;
+    height: 200px;
+}
+p{
+    outline: 1px solid black;
+    margin-top: 0;
+}
+
+.text-two{
+    margin-bottom: 0;
+
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task_5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+<form>
+    <p><input type="text" name="numbers" id="numbers"/></p>
+    <p><input type="text" name="letters" id="letters"/></p>
+    <p><input type="checkbox" name="agreement" id="check"/></p>
+    <p>
+        <input type="radio" name="type" value="first" id="first"/>
+        <input type="radio" name="type" value="second" id="second"/>
+        <input type="radio" name="type" value="last" id="last"/>
+    </p>
+    <p><button id="submit">Submit</button></p>
+</form>
+
+
+
+
+<script>
+
+    (function d() {
+        var form = $('form');
+        form.on('submit',function (event) {
+           var arr = [];
+
+
+
+                var number = $('#numbers').val(); var res;
+                if(number === ""){
+                    arr.push('Bad')
+                }
+                else if(res = /[^0-9]/.test(number)){
+                    arr.push('Bad')
+                }
+
+                var letter = $('#letters').val(); var ras;
+
+                if(letter === ""){
+                    arr.push('Bad')
+                }
+                else if(ras = /[0-9]/.test(letter)){
+                    arr.push('Bad')
+                }
+
+                var check = $('#check');
+                if(check.prop('checked') === false){
+                    arr.push('Bad')
+                }
+
+
+                var radio = $('input[name = "type"]');
+
+                if(radio[0].checked === true || radio[1].checked === true || radio[2].checked === true  ){
+                }
+                else{
+                    arr.push('Bad')
+                }
+
+
+            (function () {
+                if(arr.length>0){
+                    alert(arr.join('\n'));
+                    event.preventDefault();
+                }
+            })()
+
+
+
+
+
+        })
+
+    })();
+
+
+
+
+  /*  function checkNumber() {
+        var number = $('#numbers').val(); var res;
+        if(number === ""){
+            alert('BAD')
+        }
+        else if(res = /[^0-9]/.test(number)){
+            alert('It\'s bad')
+        }
+        else {
+
+        }
+
+    }*/
+
+
+   /* function checkLetters() {
+        var letter = $('#letters').val(); var res;
+
+        if(letter === ""){
+            alert('It\'s bad')
+        }
+        else if(res = /[0-9]/.test(letter)){
+            alert('It\'s bad')
+        }
+
+        else {
+
+        }
+    }
+
+    function checkCheck() {
+        var check = $('#check');
+        if(check.prop('checked') === false){
+            alert('It\'s bad')
+        }
+        else{
+
+        }
+    }
+
+    function checkRadio() {
+        var radio = $('input[name = "type"]');
+
+        if(radio[0].checked === true || radio[1].checked === true || radio[2].checked === true  ){
+        }
+        else{
+            alert('It\'s bad')
+        }
+
+
+    }*/
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

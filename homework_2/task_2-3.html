@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2,3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+<button id = "but">Look</button>
+<button id = "but2">Sum</button>
+
+<script>
+
+    function showStr(name,age,number,surname,year) {
+        var args = [].slice.call(arguments);
+        var positiveArr = args.filter(function(string) {
+            return typeof string === 'string';
+        });
+
+        return positiveArr.length;
+
+
+    }
+
+    $('#but').on('click',function () {
+        console.log('String length: ' + ' ' + showStr('vlad',20,333,'gar',2017));
+    });
+
+/*-------------------------------------Task_3-------------------------------------------------------*/
+
+    function sumAtr(age,year) {
+        var args = [].slice.call(arguments);
+        var sum=0;
+            for(var i = 0; i<args.length;i++){
+                sum+=args[i];
+            }
+            return sum;
+    }
+
+
+    $('#but2').on('click',function () {
+        console.log('Sum: ' + ' ' + sumAtr(20,2017));
+    });
+
+</script>
+
+</body>
+</html>

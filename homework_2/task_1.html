@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+<button id = 'but'>Look</button>
+
+
+<script>
+
+    function argCreate (name,surname,age) {
+
+        return arguments.length;
+    }
+
+    $('#but').on('click',function () {
+        console.log('arguments-length: '+ '' + argCreate('Vlad','Garyachiy',20))
+    });
+
+
+</script>
+</body>
+</html>

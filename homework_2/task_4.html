@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+<input type="text" id="text"  />
+<input type="checkbox" id="chek" />
+
+
+
+<script>
+
+
+
+function test() {
+    var text = $('#text').val();
+    var res;
+
+    if(res = /JavaScript/.test(text)){
+        $('#chek').attr('checked',true)
+    }
+    return res;
+
+}
+
+$('#text').on('keyup',function () {
+    test();
+})
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

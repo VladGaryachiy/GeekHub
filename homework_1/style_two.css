@@ -1,0 +1,55 @@
+.main{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+
+.block-one,.block-three{
+    height: 350px;
+    width: 300px;
+    outline: 1px solid black;
+}
+.block-two{
+    width: 100%;
+    height: 350px;
+    outline: 1px solid black;
+}
+
+.block-one,.block-two,.block-three{
+    margin: 20px;
+}
+
+.block-four{
+
+    height: 80px;
+    width: 100%;
+    outline: 1px solid black;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.block-one,.block-three{
+    background: blue;
+}
+.block-two{
+    background: red;
+}
+.block-four{
+    background: green;
+}
+
+.block-one   {
+    order: 1;
+}
+.block-two   {
+    order: 2;
+    flex: 1 ;
+}
+.block-three {
+    order: 3;
+}
+.block-four  {
+    order: 4;
+}
+
