@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="text" id="text">
+
+
+<script>
+
+
+
+    function test() {
+        var text = $('#text').val();
+        var arr = text.split(' ');
+        var res;
+
+        var positiveArr = arr.filter(function (valid) {
+            return res = /[a-z]+[A-Z]{1}[a-z]+/.test(valid);
+        });
+
+        console.log(positiveArr);
+
+    }
+
+    $('#text').on('keyup',function () {
+        test();
+    })
+
+
+</script>
+
+
+</body>
+</html>

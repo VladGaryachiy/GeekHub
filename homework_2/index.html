@@ -7,22 +7,43 @@
 </head>
 <body>
 
-<input type ="text">
-<button value="On">Go</button>
-
-
-
+<input type ="text" id="text">
+<input type="checkbox" checked id="chek">
+<input type="radio" name="type" value="1">
+<input type="radio" name="type" value="2">
+<input type="radio" name="type" value="3">
+<button id="but">BUT</button>
 
 <script>
+
+
+$('#but').on('click',function () {
+    var ch = $('#chek').prop('checked');
+    var text = $('#text').val();
+    var radio = $('input[name="type"]').prop('checked');
+
+
+    var obj = {
+        one:ch,
+        two:text,
+        three:radio
+    };
+
+
+    console.log(obj);
+})
+
+/*
 
 
     $("button").on("click",function (e) {
         var text = $('input[type="text"]').val();
         console.log(test(text));
+        alert(oh);
     });
 
 
-/*    function test(name,surname,nam,number1,number2) {
+/!*    function test(name,surname,nam,number1,number2) {
 
         var count = 0;
 
@@ -34,11 +55,12 @@
 
         return count;
 
-    }*/
+    }*!/
 
     function test(text) {
         return text.length;
     }
+*/
 
 </script>
 </body>

@@ -1,0 +1,18 @@
+.success {
+    border: 2px solid green;
+}
+.error{
+    border: 2px solid red;
+}
+#checkText{
+    color:red;
+    display: none;
+}
+#radioText{
+    color:red;
+    display: none;
+}
+.test{
+    border: 1px solid green;
+    padding: 2px;
+}

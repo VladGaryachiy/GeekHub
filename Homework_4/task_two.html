@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task two</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+<input type="text" id="text"/>
+<ul id="list">
+    <li>Max</li>
+    <li>Bob.Casady</li>
+    <li>Derek\Worker</li>
+    <li>BillyBob</li>
+    <li>MacGregor</li>
+    <li>Dvain-Johns</li>
+</ul>
+
+
+<script>
+
+
+   function escapeRegExp(text) {
+       return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); // отвергаем все служебные символы в строке
+
+   }
+
+
+   $('#text').on("keyup",function () {
+
+       var text = $('#text').val();
+       var list = $('#list').children();
+
+       for(var i = 0; i<list.length; i++){
+
+           var req = new RegExp(escapeRegExp(text),"i");
+           console.log(req);
+           if (req.test(list[i].textContent)){
+                list[i].hidden = false;
+
+                list[i].innerHTML = list[i].textContent.replace(req, "<span class='test'>"+list[i].textContent.match(req)+"</span>")
+
+           }
+           else{
+               list[i].hidden = true;
+           }
+
+
+
+       }
+
+
+
+
+
+
+
+
+   })
+
+
+
+</script>
+</body>
+</html>
