@@ -1,0 +1,55 @@
+.product{
+    border:1px solid black;
+}
+.product-header{
+    background: #cecece;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+body > .product{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100; /*указывает приоритет елемента*/
+}
+
+.product-header ~ .product-header{  /*применяется к тем елементам перед которыми есть указаный елемент*/
+    margin-left: 15px;
+}
+
+.products{
+    display: flex;
+}
+.product-content{
+    padding: 10px;
+    background: white;
+}
+
+.product ~ .product{
+    margin-left: 15px;
+}
+
+.carts{
+    margin-top: 15px;
+}
+.cart{
+    display: flex;
+    border: 1px solid black;
+    min-height: 100px;
+    padding: 10px;
+}
+.cart ~ .cart{
+    margin-top: 40px;
+}
+.cart.overlaps{
+    border-color: red;
+}
+
+
+.product.drugging{
+    /*opacity: 0.5; - прозрачность*/
+    display:none; /*что бы елементы сдвигались*/
+
+}

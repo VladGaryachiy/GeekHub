@@ -1,0 +1,12 @@
+ /*  (function () {
+                   for(var k = 0; k < $('[data-info]')[0].children[1].children.length; k++){
+                   console.log($('[data-info]')[0].children[1].children[i].children[1].textContent);
+                   }
+               })();*/
+
+
+
+            for(var p = 0; i < $('[data-info]')[0].children[1].children.length; i++){
+                                   if($('[data-info]')[0].children[1].children[p].children[1].textContent === helper[0].children[0].textContent){
+                                              return drop += 1
+                                   }

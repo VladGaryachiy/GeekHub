@@ -1,0 +1,50 @@
+body{
+    display: flex;
+}
+.products{
+    display: flex;
+    max-width: 400px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.name,.price{
+    background: greenyellow;
+    padding: 5px;
+}
+.product{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carts{
+    margin-left: 30%;
+}
+
+th,td{
+    padding: 10px;
+    font-size: 18px;
+}
+caption{
+    text-align: center;
+    font-size: 18px;
+    color:black;
+}
+
+body > .product{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+}
+.cart.overlaps{
+    border-color: red;
+}
+
+h4{
+    text-align: center;
+}
+.totalPrice{
+    min-height: 50px;
+    border: 1px solid black;
+}
